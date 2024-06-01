@@ -4,14 +4,17 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MobileNavigation from "./components/MobileNavigation";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setBannerData,setImageURL } from "./store/MovieSlice";
 
 const App=()=>{
-
+//define toh yhan kr  lo pr call useEffect me krna
+let dispatch=useDispatch();
   const fetchTrendingData = async()=>{
     try {
         const response = await axios.get('/trending/all/week')
         console.log("here is response",response);
-        // dispatch(setBannerData(response.data.results))
+        dispatch(setBannerData(response.data.results))
     } catch (error) {
         console.log("error",error)
     }
@@ -20,8 +23,8 @@ const App=()=>{
   const fetchConfiguration = async()=>{
     try {
         const response = await axios.get("/configuration")
-console.log("here is response",response);
-        // dispatch(setImageURL(response.data.images.secure_base_url+"original"))
+console.log("here is congfiguration",response);
+        dispatch(setImageURL(response.data.images.secure_base_url+"original"))
     } catch (error) {
       
     }
@@ -29,7 +32,7 @@ console.log("here is response",response);
 
   useEffect(()=>{
     fetchTrendingData()
-    // fetchConfiguration()
+    fetchConfiguration()
   },[])
   return(<>
   <Header/>
