@@ -2,13 +2,17 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import BannerHome from '../components/BannerHome';
 import Card from '../components/Card';
+import HorizontalCardScroll from '../components/HorizontalCardScroll';
 function Home() {
+  console.log("home rendered")
   const trendingData=useSelector(state=>state.movieData.bannerData);
   console.log(trendingData,"ye hai")
   return (
     <div>
      <BannerHome/>
-     <section className="container mx-auto px-3 my-10"> 
+
+     <HorizontalCardScroll data={trendingData} heading={"Trending"} trending={true}/>
+     {/* <section className="container mx-auto px-3 my-10"> 
      <h2 className="text-xl lg:text-2xl font-bold mb-2">Trending watchList</h2><br/><br/>
     <div className="grid grid-cols-[repeat(auto-fit,230px)] grid-flow-col gap-6">
     {
@@ -16,7 +20,7 @@ function Home() {
      }
     
     </div>
-     </section>
+     </section> */}
     </div>
   )
 }

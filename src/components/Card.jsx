@@ -21,7 +21,7 @@ const Card = ({data,trending,index}) => {
             {
                 trending && (
                     <div className='py-1 px-4 backdrop-blur-3xl rounded-r-full bg-black/60 overflow-hidden'>
-                        #{index} Trending
+                        #{index+1} Trending
                     </div>
                 )
             }

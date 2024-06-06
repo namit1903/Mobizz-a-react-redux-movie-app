@@ -6,6 +6,7 @@ import MobileNavigation from "./components/MobileNavigation";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setBannerData,setImageURL } from "./store/MovieSlice";
+import Home from "./pages/Home";
 
 const App=()=>{
 //define toh yhan kr  lo pr call useEffect me krna
@@ -37,6 +38,7 @@ console.log("here is congfiguration",response);
   return(<>
   <Header/>
 <div className="p-16">
+  {/* <Home></Home> */}
 <Outlet/>
 </div>
  <Footer/>
