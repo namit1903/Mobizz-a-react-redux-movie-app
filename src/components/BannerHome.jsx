@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const BannerHome = () => {
   let bannerData=useSelector(state=>state.movieData.bannerData);//ek baar aa jaega data
 let imageURL=useSelector(state=>state.movieData.imageURL);
-  console.log("bannerdata is:",bannerData);
-  console.log("imgurls are:",imageURL);
+  // console.log("bannerdata is:",bannerData);
+  // console.log("imgurls are:",imageURL);
   const [currentImage,setCurrentImage] = useState(0);
   const handleNext = ()=>{
     if(currentImage < bannerData.length - 1){
@@ -35,8 +35,8 @@ useEffect(()=>{
 console.log("useeffect ke turant baad h")
 
 function clearFun(){
-  console.log("clear is clicked")
-  (clearInterval(interval))
+  console.log("clear is clicked");
+  clearInterval(interval)
 }
 
   return (
