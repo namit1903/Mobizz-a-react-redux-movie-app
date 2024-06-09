@@ -8,11 +8,13 @@ import { IoSearchOutline } from "react-icons/io5";
 const Header = () => {
   console.log("header rendered")
   const location = useLocation();
+  console.log(location)
   const removeSpace = location?.search?.slice(3)?.split("%20")?.join(" ")
 const [searchInput,setSearchInput]=useState("");
 const navigate=useNavigate();
 
-useEffect(()=>{//as soon as i input sth 
+useEffect(()=>{
+  //as soon as i input sth 
   if(searchInput){
       navigate(`/search?q=${searchInput}`)
   }
