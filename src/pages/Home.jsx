@@ -8,7 +8,7 @@ function Home() {
   console.log("home rendered")
   let[nowPlaying,setNowPlaying] =useState()
   const trendingData=useSelector(state=>state.movieData.bannerData);
-  console.log(trendingData,"ye hai")
+  console.log("trending data",trendingData);
  
   const { data : nowPlayingData } = useFetch('/movie/now_playing')
   //destructuring the data property and assigning  it to the new variable i.e. nowPlaying

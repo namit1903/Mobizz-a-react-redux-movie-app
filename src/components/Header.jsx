@@ -8,7 +8,7 @@ import { IoSearchOutline } from "react-icons/io5";
 const Header = () => {
   console.log("header rendered")
   const location = useLocation();
-  console.log(location)
+  // console.log(location)
   const removeSpace = location?.search?.slice(3)?.split("%20")?.join(" ")
 const [searchInput,setSearchInput]=useState("");
 const navigate=useNavigate();
@@ -23,7 +23,7 @@ useEffect(()=>{
 
 function handleSubmit(e){
 e.preventDefault();
-console.log("search input",searchInput)
+console.log("search input",searchInput); 
 }
   return (
     <header className='fixed top-0 w-full h-16 bg-black bg-opacity-20 z-40'>

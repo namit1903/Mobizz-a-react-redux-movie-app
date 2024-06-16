@@ -21,7 +21,7 @@ const handleprevious = ()=>{
 let interval;
 console.log("useeffect ke bahar h")
 useEffect(()=>{
-  console.log("useeffect bannerhome entered")
+  console.log("useeffect bannerhome inside")
   interval = setInterval(()=>{
       if(currentImage < bannerData.length - 1){
           handleNext()

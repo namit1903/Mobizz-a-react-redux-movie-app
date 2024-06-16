@@ -36,13 +36,14 @@ console.log("here is congfiguration",response);
     fetchConfiguration()
   },[])
   return(<>
-  <Header/>
-<div className="p-16">
-  {/* <Home></Home> */}
-<Outlet/>
-</div>
- <Footer/>
- <MobileNavigation/>
+    <main className='pb-14 lg:pb-0'>
+        <Header/>
+        <div className='min-h-[90vh]'>
+            <Outlet/>
+        </div>
+        <Footer/>
+        <MobileNavigation/>
+    </main>
  </>)
 }
 export default App;

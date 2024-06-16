@@ -1,10 +1,10 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import Card from '../components/Card'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Card from '../components/Card';
 
 const SearchPage = () => {
-  // console.log("window location:-",window.location)
+  console.log("window location:-",window.location)
   console.log("Search page")
   const location=useLocation();
   const query = location?.search?.slice(3)
