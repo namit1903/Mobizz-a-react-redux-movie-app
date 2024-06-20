@@ -19,14 +19,14 @@ const handleprevious = ()=>{
   }
 }
 let interval;
-console.log("useeffect ke bahar h")
+console.log("useeffect start hoga")
 useEffect(()=>{
   console.log("useeffect bannerhome inside")
   interval = setInterval(()=>{
       if(currentImage < bannerData.length - 1){
           handleNext()
       }else{
-          setCurrentImage(0)
+          setCurrentImage(0);
       }
   },4000)
 

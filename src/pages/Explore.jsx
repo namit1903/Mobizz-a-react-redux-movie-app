@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Card from '../components/Card';
+import ShimmerUi from '../components/ShimmerUi';
 
 const Explore = () => {
   console.log("explore rendered")
@@ -10,6 +11,7 @@ const Explore = () => {
   const [data,setData] = useState([])
   const [totalPageNo,setTotalPageNo] = useState(0);
 console.log("explore data",params.explore)
+console.log(" data",data)
   const fetchData = async()=>{
     try {
         const response = await axios.get(`/discover/${params.explore}`,{
@@ -51,9 +53,9 @@ console.log("explore data",params.explore)
       window.addEventListener('scroll',handleScroll)
   },[]);
 
+console.log("TOTAL PAGE:",totalPageNo)
 
-
-  return (
+  return data.length==0?(<ShimmerUi/>):(
     <div className='py-16'>
     <div className='container mx-auto'>
         <h3 className='capitalize text-lg lg:text-xl font-semibold my-3'>Popular {params.explore} show</h3>
