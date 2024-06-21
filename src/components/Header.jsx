@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { navigation } from '../contents/navigation';
 import { IoSearchOutline } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
 
 
 const Header = () => {
@@ -29,12 +30,13 @@ console.log("search input",searchInput);
     <header className='fixed top-0 w-full h-16 bg-black bg-opacity-20 z-40'>
             <div className='container mx-auto px-3 flex items-center h-full'>
             <Link to={"/"}>
-                    {/* <img
-                        src={logo}
+                    <img
+                        src="public\logo-removebg-preview.png"
                         alt='logo'
                         width={120} 
-                    /> */}<h1>LOGO</h1>
+                    />
                 </Link>
+                
 <nav className='hidden lg:flex items-center gap-4 ml-10'>
 {navigation.map(item=>(<div key={`${Date.now()}_${item.label}`}>
   <NavLink key={item.label}to={item.href}
@@ -64,7 +66,7 @@ console.log("search input",searchInput);
                         {/* <img
                             src={userIcon}
                             width='w-ful h-full' 
-                        /> */}<h1>ICON</h1>
+                        /> */}<h1 className='p-3'><CgProfile /></h1>
                     </div>
                 </div>
                 </div>
