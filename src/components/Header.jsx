@@ -30,11 +30,11 @@ console.log("search input",searchInput);
     <header className='fixed top-0 w-full h-16 bg-black bg-opacity-20 z-40'>
             <div className='container mx-auto px-3 flex items-center h-full'>
             <Link to={"/"}>
-                    <img
-                        src="public\logo-removebg-preview.png"
+                    {/* <img
+                        src="../assets/logo.png"
                         alt='logo'
                         width={120} 
-                    />
+                    /> */}<h1 className='text-2xl font-bold'>Mobizz</h1>
                 </Link>
                 
 <nav className='hidden lg:flex items-center gap-4 ml-10'>
