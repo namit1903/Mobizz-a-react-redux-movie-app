@@ -9,7 +9,7 @@ function ShimmerUi() {
 <span className="loading loading-ball loading-sm"></span>
 <span className="loading loading-ball loading-md"></span>
 <span className="loading loading-ball loading-lg"></span>
-
+<h1>If it is loading for a Long time, then it means the API server is currently Down :&lt;</h1>
     </div>
     <div className=" flex flex-wrap gap-6">
     <div className="card  min-w-[230px] h-80 overflow-hidden block rounded relative hover:scale-105 transition-all shadow-xl flex-row justify-evenly ">
